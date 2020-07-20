@@ -2611,6 +2611,7 @@ function (_Emitter) {
 
       var headers = {
         "Accept": "*/*",
+        "Aaaaaa": "value"
       };
 
       if (this.options.headers) {
