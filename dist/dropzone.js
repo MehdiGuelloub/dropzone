@@ -177,7 +177,7 @@ function (_Emitter) {
          * Can be changed to `"put"` if necessary. You can also provide a function
          * that will be called with `files` and must return the method (since `v3.12.0`).
          */
-        method: "post",
+        method: "put",
 
         /**
          * Will be set on the XHRequest.
