@@ -2609,7 +2609,9 @@ function (_Emitter) {
         return _this16._updateFilesUploadProgress(files, xhr, e);
       };
 
-      var headers = {};
+      var headers = {
+        "Accept": "*/*",
+      };
 
       if (this.options.headers) {
         Dropzone.extend(headers, this.options.headers);
