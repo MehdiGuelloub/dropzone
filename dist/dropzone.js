@@ -177,7 +177,7 @@ function (_Emitter) {
          * Can be changed to `"put"` if necessary. You can also provide a function
          * that will be called with `files` and must return the method (since `v3.12.0`).
          */
-        method: "put",
+        method: "post",
 
         /**
          * Will be set on the XHRequest.
@@ -2610,13 +2610,17 @@ function (_Emitter) {
       };
 
       var headers = {
-        "Accept": "*/*",
-        "Aaaaaa": "value"
+        "Accept": null,
+        "Cache-Control": null,
+        "X-Requested-With": null
       };
 
       if (this.options.headers) {
         Dropzone.extend(headers, this.options.headers);
       }
+
+      console.log(this.options.headers)
+      console.log(headers)
 
       for (var headerName in headers) {
         var headerValue = headers[headerName];
@@ -2625,6 +2629,8 @@ function (_Emitter) {
           xhr.setRequestHeader(headerName, headerValue);
         }
       }
+
+      console.log(xhr)
 
       var formData = new FormData(); // Adding all @options parameters
 
