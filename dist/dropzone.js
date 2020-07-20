@@ -2609,11 +2609,7 @@ function (_Emitter) {
         return _this16._updateFilesUploadProgress(files, xhr, e);
       };
 
-      var headers = {
-        "Accept": "application/json",
-        "Cache-Control": "no-cache",
-        "X-Requested-With": "XMLHttpRequest"
-      };
+      var headers = {};
 
       if (this.options.headers) {
         Dropzone.extend(headers, this.options.headers);
